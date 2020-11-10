@@ -1,0 +1,81 @@
+@import 'components/color';
+@import 'components/nav';
+@import 'components/button';
+@import 'components/text';
+@import 'components/card';
+@import 'components/form';
+@import 'components/social';
+@import 'components/modal';
+@import 'components/content';
+
+@media only screen and (max-width: 599px) {
+    .label{
+        display: none;
+    }
+    .card{
+        margin-top: 0;
+    }
+    .f-l-p{
+        float: left;
+    }
+    .modelo{
+        float: left;
+        padding-right: 0!important;
+    }
+    .anio{
+        float: left;
+        padding-left: 0!important;
+    }
+    .p-0-l{
+        padding-left: 0!important;
+        padding-right: 0!important;
+    }
+    .b-t-c{
+        border-top: 6px solid;
+        border-color:$colorprimary;
+    }
+    .j-c-c{
+        justify-content: center!important;
+    }
+    .share{
+        top: 3.8%;
+        font-size: 1rem;
+    }
+}
+@media (min-width: 600px) and (max-width: 991px) {
+    .f-l{
+        float: left;
+        margin-top: 1rem;
+    }
+    .card{
+        margin-top: 2rem;
+    }
+    .line-blue{
+        top: 25%;
+        height: 25%;
+    }
+    .j-c-c{
+        justify-content: center!important;
+    }
+} 
+@media only screen and (min-width: 992px) {
+    .card{
+        margin-top: 3rem;
+    }
+    .f-l{
+        margin-top: .5rem;
+    }
+    .fields-left{
+        float: left;
+    }
+    .w-8{
+        width: 80%;
+        margin-left: 40%;
+    }
+    .p-l-fields{
+        padding-left: 0!important;
+    }
+    .p-r-fields{
+        padding-right: 0!important;
+    }
+}

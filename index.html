@@ -16,7 +16,7 @@
     <meta property="og:image:alt" content="Compara online logo">
     <meta property="og:description" content="Comparador en línea de crédito automotriz">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="assets/stylesheets/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="assets/stylesheets/css/style.css" rel="stylesheet" type="text/css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <title>comparaonline</title>
@@ -41,15 +41,15 @@
                 <div class="col-lg-10 offset-lg-1 p-0-l">
                     <div class="col-sm-12 text-center p-0 mb-4">
                         <h1 class="azul">Cotiza tu Seguro Automotriz</h1>
-                        <h3 class="color_text font-weight-normal">¡Resultados instantáneos!</h3>
+                        <h3 class="color-text font-weight-normal">¡Resultados instantáneos!</h3>
                     </div>
                     <div class="col-12 p-0-l">
                         <form class="mt-3" name="form">
                                 <div class="col-lg-6 col-sm-12 fields-left p-l-fields">
-                                    <label class="label color_text col-lg-12 col-sm-4 f-l p-0" for="marca">Marca del auto</label>
+                                    <label class="label color-text col-lg-12 col-sm-4 f-l p-0" for="marca">Marca del auto</label>
                                     <div class="col-lg-12 col-sm-8 f-l p-0">
                                         <select class="form-control form-control-lg" id="marca" required>
-                                            <option></option>
+                                            <option value="0"></option>
                                             <option value="Renault">Renault</option>
                                             <option value="Chevrolet">Chevrolet</option>
                                             <option value="Mazda">Mazda</option>
@@ -58,7 +58,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-sm-12 col-8 modelo fields-left p-r-fields">
-                                    <label class="label color_text col-lg-12 col-sm-4 f-l p-0" for="modelo">Modelo del auto</label>
+                                    <label class="label color-text col-lg-12 col-sm-4 f-l p-0" for="modelo">Modelo del auto</label>
                                     <div class="col-lg-12 col-sm-8 f-l p-0">
                                         <select class="form-control form-control-lg" id="modelo" required>
                                             <option></option>
@@ -70,7 +70,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-4 col-sm-12 col-4 anio fields-left p-l-fields">
-                                    <label class="label color_text col-lg-12 col-sm-4 f-l p-0" for="anio">Año</label>
+                                    <label class="label color-text col-lg-12 col-sm-4 f-l p-0" for="anio">Año</label>
                                     <div class="col-lg-12 col-sm-8 f-l p-0">
                                         <select class="form-control form-control-lg" id="anio" required>
                                             <option></option>
@@ -82,9 +82,9 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-8 col-sm-12 fields-left p-r-fields">
-                                    <label class="label color_text col-lg-12 col-sm-4 f-l p-0" for="email">Email</label>
+                                    <label class="label color-text col-lg-12 col-sm-4 f-l p-0" for="email">Email</label>
                                     <div class="col-lg-12 col-sm-8 f-l p-0">
-                                        <input type="email" class="form-control form-control-lg" id="email" required>
+                                        <input type="email" class="form-control form-control-lg" id="email" placeholder="" required>
                                     </div>
                                 </div>
                             <button type="button" class="btn btn-primary btn-lg col-12 mt-5" onclick="validar_form()">Cotizar</button>
@@ -122,8 +122,23 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
     <script>
-        function validar_form(){                       
+        function resize() {
+            if (window.innerWidth < 600){
+                document.getElementById('email').placeholder='Email';
+                document.getElementById('marca').innerHTML='<option>Marca del auto</option><option value="Renault">Renault</option><option value="Chevrolet">Chevrolet</option><option value="Mazda">Mazda</option><option value="Ford">Ford</option>';
+                document.getElementById('modelo').innerHTML='<option>Modelo</option><option value="Megane II">Megane II</option><option value="Mazda 3">Mazda 3</option><option value="Cobalt">Cobalt</option><option value="Tracker">Tracker</option>';
+                document.getElementById('anio').innerHTML='<option>Año</option><option value="2015">2015</option><option value="2016">2016</option><option value="2017">2017</option><option value="2018">2018</option>';                
+            }else{
+                document.getElementById('email').placeholder='';
+                document.getElementById('marca').innerHTML='<option></option><option value="Renault">Renault</option><option value="Chevrolet">Chevrolet</option><option value="Mazda">Mazda</option><option value="Ford">Ford</option>';
+                document.getElementById('modelo').innerHTML='<option></option><option value="Megane II">Megane II</option><option value="Mazda 3">Mazda 3</option><option value="Cobalt">Cobalt</option><option value="Tracker">Tracker</option>';
+                document.getElementById('anio').innerHTML='<option></option><option value="2015">2015</option><option value="2016">2016</option><option value="2017">2017</option><option value="2018">2018</option>';
+            }
+        }
+        window.onresize = resize;
+        function validar_form(){
             //validacion marca
             marca = document.form.marca.value
             if (document.form.marca.selectedIndex==0){
@@ -163,7 +178,7 @@
 
         function limpiarFormulario() {
             document.form.submit();
-        }
+        }        
     </script>
     </body>
 </html>
