@@ -1,0 +1,114 @@
+nav{
+    background-color: #464646;
+}
+.card{
+    -webkit-box-shadow: 0px 0px 8px 0px rgba(166,163,166,1);
+    -moz-box-shadow: 0px 0px 8px 0px rgba(166,163,166,1);
+    box-shadow: 0px 0px 8px 0px rgba(166,163,166,1);
+    border: 0px!important;
+    border-radius: .1rem!important;
+}
+.azul{
+    color:#36aadd;
+}
+h1{
+    font-weight: inherit!important;
+}
+.btn-primary {
+    background-color: #bbd550!important;
+    border-color: #bbd550!important;
+    font-size: 2rem!important;
+    font-weight: 500!important;
+    -webkit-box-shadow: 0px 3px 0px 0px rgba(159,188,45,1);
+    -moz-box-shadow: 0px 3px 0px 0px rgba(159,188,45,1);
+    box-shadow: 0px 3px 0px 0px rgba(159,188,45,1);
+}
+.form-control-lg {
+    border-radius: 0px!important;
+}
+.color_text{
+    color: #888888;
+}
+.line-blue{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 35%;
+    background-color:#36aadd;
+}
+.share{
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    font-size: 1.5rem;
+}
+.modal-header{
+    background-color: #464646!important;
+}
+@media only screen and (max-width: 600px) {
+    .label{
+        display: none;
+    }
+    .card{
+        margin-top: 0;
+    }
+    .f-l-p{
+        float: left;
+    }
+    .modelo{
+        float: left;
+        padding-right: 0!important;
+    }
+    .anio{
+        float: left;
+        padding-left: 0!important;
+    }
+    .p-0-l{
+        padding-left: 0!important;
+        padding-right: 0!important;
+    }
+    .b-t-c{
+        border-top: 6px solid;
+        border-color:#36aadd;
+    }
+    .j-c-c{
+        justify-content: center!important;
+    }
+}
+@media (min-width: 600px) and (max-width: 991px) {
+    .f-l{
+        float: left;
+        margin-top: 1rem;
+    }
+    .card{
+        margin-top: 2rem;
+    }
+    .line-blue{
+        top: 25%;
+        height: 25%;
+    }
+    .j-c-c{
+        justify-content: center!important;
+    }
+} 
+@media only screen and (min-width: 992px) {
+    .card{
+        margin-top: 3rem;
+    }
+    .f-l{
+        margin-top: .5rem;
+    }
+    .fields-left{
+        float: left;
+    }
+    .w-8{
+        width: 80%;
+        margin-left: 40%;
+    }
+    .p-l-fields{
+        padding-left: 0!important;
+    }
+    .p-r-fields{
+        padding-right: 0!important;
+    }
+}

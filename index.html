@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="Description" content="Comparador en línea de crédito automotriz"/>
+    <meta name="Keywords" content="crédito automotriz, comparador crédito automotriz"/>
+    <meta property="og:title" content="Compara online">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://.../">
+    <meta property="og:image" content="https://.../logo.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="300">
+    <meta property="og:image:height" content="300">
+    <meta property="og:image:alt" content="Compara online logo">
+    <meta property="og:description" content="Comparador en línea de crédito automotriz">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="assets/stylesheets/style.css" rel="stylesheet" type="text/css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>comparaonline</title>
+  </head>
+  <body>
+    <!--Start nav-->
+    <nav class="navbar navbar-light pt-0 pb-0 j-c-c">
+        <a class="navbar-brand" href="#">
+          <img class="w-8" src="assets/images/logo.png" alt="Logotipo">
+        </a>
+    </nav>
+    <!--End nav-->
+    <div class="line-blue"></div>
+    <div class="share text-white">
+        <i class="fa fa-facebook-official" aria-hidden="true"></i>
+        <i class="fa fa-twitter-square" aria-hidden="true"></i>
+        <i class="fa fa-google-plus-square" aria-hidden="true"></i>
+    </div>
+    <div class="container p-0-l b-t-c">
+        <div class="card col-lg-8 col-md-12 col-sm-12 p-0-l">
+            <div class="card-body p-0-l">
+                <div class="col-lg-10 offset-lg-1 p-0-l">
+                    <div class="col-sm-12 text-center p-0 mb-4">
+                        <h1 class="azul">Cotiza tu Seguro Automotriz</h1>
+                        <h3 class="color_text font-weight-normal">¡Resultados instantáneos!</h3>
+                    </div>
+                    <div class="col-12 p-0-l">
+                        <form class="mt-3" name="form">
+                                <div class="col-lg-6 col-sm-12 fields-left p-l-fields">
+                                    <label class="label color_text col-lg-12 col-sm-4 f-l p-0" for="marca">Marca del auto</label>
+                                    <div class="col-lg-12 col-sm-8 f-l p-0">
+                                        <select class="form-control form-control-lg" id="marca" required>
+                                            <option></option>
+                                            <option value="Renault">Renault</option>
+                                            <option value="Chevrolet">Chevrolet</option>
+                                            <option value="Mazda">Mazda</option>
+                                            <option value="Ford">Ford</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-sm-12 col-8 modelo fields-left p-r-fields">
+                                    <label class="label color_text col-lg-12 col-sm-4 f-l p-0" for="modelo">Modelo del auto</label>
+                                    <div class="col-lg-12 col-sm-8 f-l p-0">
+                                        <select class="form-control form-control-lg" id="modelo" required>
+                                            <option></option>
+                                            <option value="Megane II">Megane II</option>
+                                            <option value="Mazda 3">Mazda 3</option>
+                                            <option value="Cobalt">Cobalt</option>
+                                            <option value="Tracker">Tracker</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-sm-12 col-4 anio fields-left p-l-fields">
+                                    <label class="label color_text col-lg-12 col-sm-4 f-l p-0" for="anio">Año</label>
+                                    <div class="col-lg-12 col-sm-8 f-l p-0">
+                                        <select class="form-control form-control-lg" id="anio" required>
+                                            <option></option>
+                                            <option value="2015">2015</option>
+                                            <option value="2016">2016</option>
+                                            <option value="2017">2017</option>
+                                            <option value="2018">2018</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-8 col-sm-12 fields-left p-r-fields">
+                                    <label class="label color_text col-lg-12 col-sm-4 f-l p-0" for="email">Email</label>
+                                    <div class="col-lg-12 col-sm-8 f-l p-0">
+                                        <input type="email" class="form-control form-control-lg" id="email" required>
+                                    </div>
+                                </div>
+                            <button type="button" class="btn btn-primary btn-lg col-12 mt-5" onclick="validar_form()">Cotizar</button>
+                        </form>
+                    </div>
+                    <div class="col-12 text-center mt-5"><p class="azul">Recuperar cotización</p></div>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+    <!-- Modal -->
+    <div class="modal fade" id="Thankyoupage" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle"><img src="assets/images/logo.png" alt="Logotipo"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="limpiarFormulario()">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h4 id="text-register"></h4>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="limpiarFormulario()">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin Modal -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script>
+        function validar_form(){                       
+            //validacion marca
+            marca = document.form.marca.value
+            if (document.form.marca.selectedIndex==0){
+                alert("Seleccione marca.")
+                document.form.marca.focus()
+                return 0;
+            }
+
+            //validacion modelo
+            modelo = document.form.modelo.value
+            if (document.form.modelo.selectedIndex==0){
+                alert("Seleccione modelo.")
+                document.form.modelo.focus()
+                return 0;
+            }
+
+            //validacion año
+            email = document.form.anio.value
+            if (document.form.anio.selectedIndex==0){
+                alert("Seleccione año.")
+                document.form.anio.focus()
+                return 0;
+            }
+
+            //validacion email
+            email = document.form.email.value
+            expr = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            if ( !expr.test(email) ){
+                alert("Error: La dirección de correo " + email + " es incorrecta."); 
+                document.form.email.focus()
+                return 0;
+            }
+
+            $('#Thankyoupage').modal('show')
+            document.getElementById('text-register').innerHTML='Gracias, su cotización para el vehículo '+ marca +', modelo '+ modelo +' se ha enviado a su correo '+ email +'.';
+        }
+
+        function limpiarFormulario() {
+            document.form.submit();
+        }
+    </script>
+    </body>
+</html>
